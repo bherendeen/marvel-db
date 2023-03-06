@@ -34,6 +34,7 @@ async function start() {
 function setUpMiddlewares() {
     app.use(bodyParser.json());
     app.use(corsMiddleware);
+    app.use('/', require('./routes'));
 }
 
 function startServer() {
