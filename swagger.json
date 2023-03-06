@@ -1,0 +1,40 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "A database to look up Marvel movies, comic books, and characters.",
+    "version": "1.0.0",
+    "title": "Marvel DB"
+  },
+  "host": "https://marvel-db.onrender.com",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Movies",
+      "description": "Everything to lookup, add, update, delete movies"
+    },
+    {
+      "name": "ComicBooks",
+      "description": "Everything to lookup, add, update, delete comic books"
+    },
+    {
+      "name": "Characters",
+      "description": "Everything to lookup, add, update, delete characters"
+    },
+    {
+      "name": "Users",
+      "description": "Everything to lookup, add, update, delete users."
+    }
+  ],
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    }
+  }
+}
