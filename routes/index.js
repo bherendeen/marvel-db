@@ -6,7 +6,7 @@ const swaggerRoutes = require('./swagger');
 // const movieRoutes = require('./movieRoutes');
 // const comicBookRoutes = require('./comicBookRoutes');
 // const characterRoutes = require('./characterRoutes');
-// const userRoutes = require('./userRoutes');
+const userRoutes = require('./userRoutes');
 
 // -------------------- //
 // C O N F I G  C O D E //
@@ -24,7 +24,7 @@ router.use('/', swaggerRoutes);
 // router.use('/movies', movieRoutes);
 // router.use('/comics', comicBookRoutes);
 // router.use('/characters', characterRoutes);
-// router.use('/users', userRoutes);
+router.use('/users', userRoutes);
 
 // -------------------- //
 // E N D   //   C O D E //
