@@ -6,7 +6,7 @@ const doc = {
         version: '1.0.0',
         title: 'Marvel DB'
     },
-    host: 'marvel-db.onrender.com',
+    host: 'marvel-rest-api.onrender.com',
     schemes: ['https'],
     tags: [{
             name: 'Movies',
