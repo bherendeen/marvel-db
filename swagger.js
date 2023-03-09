@@ -10,15 +10,15 @@ const doc = {
     schemes: ['https'],
     tags: [{
             name: 'Movies',
-            description: 'Everything to lookup, add, update, delete movies'
+            description: 'Everything to lookup, add, update, delete movies.'
         },
         {
             name: 'ComicBooks',
-            description: 'Everything to lookup, add, update, delete comic books'
+            description: 'Everything to lookup, add, update, delete comic books.'
         },
         {
             name: 'Characters',
-            description: 'Everything to lookup, add, update, delete characters'
+            description: 'Everything to lookup, add, update, delete characters.'
         },
         {
             name: 'Users',

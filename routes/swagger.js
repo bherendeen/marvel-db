@@ -8,6 +8,7 @@ const swaggerDocument = require('../swagger.json');
 // -------------------- //
 // S T A R T    C O D E //
 
+// sagger docs
 router.use('/api-docs', swaggerUi.serve);
 router.get('/api-docs', swaggerUi.setup(swaggerDocument));
 
