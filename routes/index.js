@@ -3,9 +3,9 @@
 const express = require('express');
 // Custom mods
 const swaggerRoutes = require('./swagger');
-// const movieRoutes = require('./movieRoutes');
-// const comicBookRoutes = require('./comicBookRoutes');
-// const characterRoutes = require('./characterRoutes');
+const movieRoutes = require('./movieRoutes');
+const comicBookRoutes = require('./comicBookRoutes');
+const characterRoutes = require('./characterRoutes');
 const userRoutes = require('./userRoutes');
 
 // -------------------- //
@@ -21,9 +21,9 @@ const router = express.Router();
 router.use('/', swaggerRoutes);
 
 // Use API routes
-// router.use('/movies', movieRoutes);
-// router.use('/comics', comicBookRoutes);
-// router.use('/characters', characterRoutes);
+router.use('/movies', movieRoutes);
+router.use('/comics', comicBookRoutes);
+router.use('/characters', characterRoutes);
 router.use('/users', userRoutes);
 
 // -------------------- //

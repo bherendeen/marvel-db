@@ -36,6 +36,648 @@
         "responses": {}
       }
     },
+    "/movies/": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "summary": "Get all movies",
+        "description": "Endpoint used to get all movies",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Movies"
+        ],
+        "summary": "Create movie",
+        "description": "Endpoint used to create a movie",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "imageURL": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "rating": {
+                  "example": "any"
+                },
+                "releaseYear": {
+                  "example": "any"
+                },
+                "movieMinutes": {
+                  "example": "any"
+                },
+                "genreAction": {
+                  "example": "any"
+                },
+                "genreAdventure": {
+                  "example": "any"
+                },
+                "genreAnimation": {
+                  "example": "any"
+                },
+                "genreBiography": {
+                  "example": "any"
+                },
+                "genreComedy": {
+                  "example": "any"
+                },
+                "genreCrime": {
+                  "example": "any"
+                },
+                "genreDocumentary": {
+                  "example": "any"
+                },
+                "genreDrama": {
+                  "example": "any"
+                },
+                "genreFamily": {
+                  "example": "any"
+                },
+                "genreFantasy": {
+                  "example": "any"
+                },
+                "genreHistory": {
+                  "example": "any"
+                },
+                "genreHorror": {
+                  "example": "any"
+                },
+                "genreMusic": {
+                  "example": "any"
+                },
+                "genreMusical": {
+                  "example": "any"
+                },
+                "genreMystery": {
+                  "example": "any"
+                },
+                "genreRomance": {
+                  "example": "any"
+                },
+                "genreSciFi": {
+                  "example": "any"
+                },
+                "genreShortFilm": {
+                  "example": "any"
+                },
+                "genreSport": {
+                  "example": "any"
+                },
+                "genreSuperhero": {
+                  "example": "any"
+                },
+                "genreThriller": {
+                  "example": "any"
+                },
+                "genreWar": {
+                  "example": "any"
+                },
+                "genreWestern": {
+                  "example": "any"
+                },
+                "moviePreview": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/movies/{movieId}": {
+      "get": {
+        "tags": [
+          "Movies"
+        ],
+        "summary": "Get a movie",
+        "description": "Endpoint used to fetch a single movie | movieId required",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Movies"
+        ],
+        "summary": "Update movie",
+        "description": "Endpoint used to update a single movie | movieId required",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "imageURL": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "rating": {
+                  "example": "any"
+                },
+                "releaseYear": {
+                  "example": "any"
+                },
+                "movieMinutes": {
+                  "example": "any"
+                },
+                "genreAction": {
+                  "example": "any"
+                },
+                "genreAdventure": {
+                  "example": "any"
+                },
+                "genreAnimation": {
+                  "example": "any"
+                },
+                "genreBiography": {
+                  "example": "any"
+                },
+                "genreComedy": {
+                  "example": "any"
+                },
+                "genreCrime": {
+                  "example": "any"
+                },
+                "genreDocumentary": {
+                  "example": "any"
+                },
+                "genreDrama": {
+                  "example": "any"
+                },
+                "genreFamily": {
+                  "example": "any"
+                },
+                "genreFantasy": {
+                  "example": "any"
+                },
+                "genreHistory": {
+                  "example": "any"
+                },
+                "genreHorror": {
+                  "example": "any"
+                },
+                "genreMusic": {
+                  "example": "any"
+                },
+                "genreMusical": {
+                  "example": "any"
+                },
+                "genreMystery": {
+                  "example": "any"
+                },
+                "genreRomance": {
+                  "example": "any"
+                },
+                "genreSciFi": {
+                  "example": "any"
+                },
+                "genreShortFilm": {
+                  "example": "any"
+                },
+                "genreSport": {
+                  "example": "any"
+                },
+                "genreSuperhero": {
+                  "example": "any"
+                },
+                "genreThriller": {
+                  "example": "any"
+                },
+                "genreWar": {
+                  "example": "any"
+                },
+                "genreWestern": {
+                  "example": "any"
+                },
+                "moviePreview": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Movies"
+        ],
+        "summary": "Delete movie",
+        "description": "Endpoint used to delete a single movie | movieId required",
+        "parameters": [
+          {
+            "name": "movieId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/comics/": {
+      "get": {
+        "tags": [
+          "ComicBooks"
+        ],
+        "summary": "Get all comic books",
+        "description": "Endpoint used to fetch all comic books",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "ComicBooks"
+        ],
+        "summary": "Create comic book",
+        "description": "Endpoint used to create a comic book",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "imageURL": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "writer": {
+                  "example": "any"
+                },
+                "coverArtist": {
+                  "example": "any"
+                },
+                "publishMonth": {
+                  "example": "any"
+                },
+                "publishDay": {
+                  "example": "any"
+                },
+                "publishYear": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/comics/{comicBookId}": {
+      "get": {
+        "tags": [
+          "ComicBooks"
+        ],
+        "summary": "Get single comic book",
+        "description": "Endpoint used to fetch a single comic book | comicBookId required",
+        "parameters": [
+          {
+            "name": "comicBookId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ComicBooks"
+        ],
+        "summary": "Update comic book",
+        "description": "Endpoint used to update a single comic book | comicBookId required",
+        "parameters": [
+          {
+            "name": "comicBookId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "imageURL": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "writer": {
+                  "example": "any"
+                },
+                "coverArtist": {
+                  "example": "any"
+                },
+                "publishMonth": {
+                  "example": "any"
+                },
+                "publishDay": {
+                  "example": "any"
+                },
+                "publishYear": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ComicBooks"
+        ],
+        "summary": "Delete comic book",
+        "description": "Endpoint used to delete a single comic book | comicBookId required",
+        "parameters": [
+          {
+            "name": "comicBookId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/characters/": {
+      "get": {
+        "tags": [
+          "Characters"
+        ],
+        "summary": "Get all characters",
+        "description": "Endpoint used to fetch all characters",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Characters"
+        ],
+        "summary": "Create character",
+        "description": "Endpoint used to create a character",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "aka": {
+                  "example": "any"
+                },
+                "biography": {
+                  "example": "any"
+                },
+                "abilityDescription": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/characters/{characterId}": {
+      "get": {
+        "tags": [
+          "Characters"
+        ],
+        "summary": "Get single character",
+        "description": "Endpoint used to fetch a single character | characterId required",
+        "parameters": [
+          {
+            "name": "characterId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Characters"
+        ],
+        "summary": "Update character",
+        "description": "Endpoint used to update a single character | characterId required",
+        "parameters": [
+          {
+            "name": "characterId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "aka": {
+                  "example": "any"
+                },
+                "biography": {
+                  "example": "any"
+                },
+                "abilityDescription": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Characters"
+        ],
+        "summary": "Delete character",
+        "description": "Endpoint used to delete a single character | characterId required",
+        "parameters": [
+          {
+            "name": "characterId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
     "/users/": {
       "get": {
         "tags": [
