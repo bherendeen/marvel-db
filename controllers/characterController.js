@@ -2,7 +2,6 @@
 // Addon mods
 // Custom mods
 const Character = require('../models/characterModel');
-const validation = require('../validation/validate');
 
 // -------------------- //
 // S T A R T    C O D E //

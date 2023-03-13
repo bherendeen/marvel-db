@@ -2,7 +2,6 @@
 // Addon mods
 // Custom mods
 const ComicBook = require('../models/comicBookModel');
-const validation = require('../validation/validate');
 
 // -------------------- //
 // S T A R T    C O D E //
