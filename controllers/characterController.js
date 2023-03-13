@@ -56,14 +56,6 @@ exports.createCharacter = async (req, res) => {
      */
     /// SWAGGER END ///
     try {
-        // Character data check
-        const characterData = validation.characterValidation(req.body);
-        if (characterData.error) {
-            res.status(400).send({
-                message: characterData.error.details
-            });
-            return;
-        }
 
         const newCharacter = {
             name: req.body.name,
@@ -91,15 +83,6 @@ exports.updateCharacter = async (req, res) => {
     /// SWAGGER END ///
     try {
         const characterId = req.params.characterId;
-
-        // Character data check
-        const characterData = validation.characterValidation(req.body);
-        if (characterData.error) {
-            res.status(400).send({
-                message: characterData.error.details
-            });
-            return;
-        }
 
         const character = await Character.findById(characterId);
         character.name = req.body.name,

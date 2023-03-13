@@ -56,14 +56,6 @@ exports.createComicBook = async (req, res) => {
      */
     /// SWAGGER END ///
     try {
-        // Comic book data check
-        const comicBookData = validation.comicBookValidation(req.body);
-        if (comicBookData.error) {
-            res.status(400).send({
-                message: comicBookData.error.details
-            });
-            return;
-        }
 
         const newComicBook = {
             title: req.body.title,
@@ -99,15 +91,6 @@ exports.updateComicBook = async (req, res) => {
     /// SWAGGER END ///
     try {
         const comicBookId = req.params.comicBookId;
-
-        // Comic book data check
-        const comicBookData = validation.comicBookValidation(req.body);
-        if (comicBookData.error) {
-            res.status(400).send({
-                message: comicBookData.error.details
-            });
-            return;
-        }
 
         const comicBook = await ComicBook.findById(comicBookId);
         comicBook.title = req.body.title,

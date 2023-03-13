@@ -52,14 +52,6 @@ exports.createMovie = async (req, res) => {
      */
     /// SWAGGER END ///
     try {
-        // Movie data check
-        const movieData = validation.movieValidation(req.body);
-        if (movieData.error) {
-            res.status(400).send({
-                message: movieData.error.details
-            });
-            return;
-        }
 
         const newMovie = {
             title: req.body.title,
@@ -117,15 +109,6 @@ exports.updateMovie = async (req, res) => {
     /// SWAGGER END ///
     try {
         const movieId = req.params.movieId;
-
-        // Movie data check
-        const movieData = validation.movieValidation(req.body);
-        if (movieData.error) {
-            res.status(400).send({
-                message: movieData.error.details
-            });
-            return;
-        }
 
         const movie = await Movie.findById(movieId);
 
